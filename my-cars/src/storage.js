@@ -11,16 +11,10 @@ function saveCar(car) {
   localStorage.setItem('cars', JSON.stringify(cars));
 }
 
-function updateCar(index, updatedCar) {
-  const cars = getCars();
-  cars[index] = updatedCar;
-  localStorage.setItem('cars', JSON.stringify(cars));
-}
-
 function deleteCar(index) {
   const cars = getCars();
   cars.splice(index, 1);
   localStorage.setItem('cars', JSON.stringify(cars));
 }
 
-export { getCars, saveCar, updateCar, deleteCar };
+export { getCars, saveCar, deleteCar };
