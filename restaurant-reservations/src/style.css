@@ -1,0 +1,128 @@
+/* Setări generale pentru font și culori */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #4a90e2;
+}
+
+h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Stilizarea formularului */
+form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1rem;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #357ABD;
+}
+
+/* Lista de rezervări */
+#reservationList {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    width: 100%;
+}
+
+#reservationList li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+}
+
+#reservationList li span {
+    font-weight: bold;
+}
+
+#reservationList button {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+}
+
+#reservationList button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsivitate */
+@media (max-width: 480px) {
+    form, #reservationList {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}

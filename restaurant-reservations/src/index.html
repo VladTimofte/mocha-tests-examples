@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervare Masă Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rezervare Masă</h1>
+    <form id="reservationForm">
+        <label for="name">Nume:</label>
+        <input type="text" id="name" required>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Ora:</label>
+        <input type="time" id="time" required>
+
+        <label for="guests">Număr de persoane:</label>
+        <input type="number" id="guests" min="1" required>
+
+        <button type="submit">Rezervă</button>
+    </form>
+
+    <h2>Rezervările tale</h2>
+    <ul id="reservationList"></ul>
+
+    <script type="module" src="storage.js"></script>
+    <script type="module" src="app.js"></script>
+    <script>
+        const dateInput = document.getElementById('date');
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = (today.getMonth() + 1).toString().padStart(2, '0');
+        const day = today.getDate().toString().padStart(2, '0');
+        dateInput.min = `${year}-${month}-${day}`;
+    </script>
+</body>
+</html>
