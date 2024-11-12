@@ -1,6 +1,21 @@
 // Funcție pentru a adăuga o rezervare
 function saveReservation(reservation) {
+  if (Object.keys(reservation)?.length !== 4) return;
   const reservations = getReservations();
+
+  const duplicate = reservations.some(
+    (res) =>
+      res.name === reservation.name &&
+      res.date === reservation.date &&
+      res.time === reservation.time &&
+      res.guests === reservation.guests
+  );
+
+  if (duplicate) {
+    console.log("Aceasta rezervare exista deja si nu va fi salvata din nou!");
+    return;
+  }
+
   reservations.push(reservation);
   localStorage.setItem("reservations", JSON.stringify(reservations));
 }
